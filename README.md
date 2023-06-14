@@ -1,1 +1,1 @@
-/* Add Author and Project Details here */
+/*Milkias Butsuamlak this is a project and repository used to create a simple application that performs statistical analytics on a dataset. */

@@ -9,13 +9,13 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c
+ * @brief sorce file for doing some basic statstics on a given array
  *
  * <Add Extended Description Here>
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Milkias Butsumalak
+ * @date 16/5/2023
  *
  */
 
@@ -38,6 +38,58 @@ void main() {
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
 
+print_array(test,SIZE);
+print_statistics(test,SIZE);
+sort_array(test,SIZE);
+
+
+
+ 
+
+
 }
 
 /* Add other Implementation File Code Here */
+
+ unsigned char print_statistics (unsigned char *data, unsigned int size) {
+	
+ }
+
+
+
+ unsigned char print_array (unsigned char *data, unsigned int size) {
+	
+	
+ }
+	
+
+
+ unsigned char find_median (unsigned char *data, unsigned int size){
+ 	
+ }
+
+
+
+
+ unsigned char find_mean (unsigned char *data, unsigned int size){
+	
+ }
+
+
+
+ unsigned char find_maximum (unsigned char *data, unsigned int size){
+	
+
+ }
+
+
+ unsigned char find_minimum (unsigned char *data, unsigned int size){
+	
+
+ }
+
+
+unsigned char sort_array (unsigned char *data, unsigned int size){
+	
+ }
+
