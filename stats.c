@@ -15,7 +15,7 @@
  * <Add Extended Description Here>
  *
  * @author Milkias Butsumalak
- * @date 16/5/2023
+ * @date 14/6/2023
  *
  */
 
@@ -52,44 +52,113 @@ sort_array(test,SIZE);
 /* Add other Implementation File Code Here */
 
  unsigned char print_statistics (unsigned char *data, unsigned int size) {
-	
+	 // Calculate and print the statistics
+    unsigned char minimum = find_minimum(data, size);
+    unsigned char maximum = find_maximum(data, size);
+    unsigned char mean = find_mean(data, size);
+    unsigned char median = find_median(data, size);
+
+    printf("Statistics:\n");
+    printf("Minimum: %d\n", minimum);
+    printf("Maximum: %d\n", maximum);
+    printf("Mean: %d\n", mean);
+    printf("Median: %d\n", median);
+
+    return median; // Return the median value
  }
 
 
 
  unsigned char print_array (unsigned char *data, unsigned int size) {
-	
-	
+	//print the array elements
+	printf("Array elements:\n");
+	for (unsigned int i = 0; i < size; i++) {
+        	printf("%d ", data[i]);
+   	 }
+    	printf("\n");
+
+    	return 0; 
  }
 	
 
 
  unsigned char find_median (unsigned char *data, unsigned int size){
- 	
+ 	 // Sort the array
+    sort_array(data, size);
+
+    // Calculate the median value
+    unsigned int middle = size / 2;
+    unsigned char median = data[middle];
+
+    return median;
  }
 
 
 
 
  unsigned char find_mean (unsigned char *data, unsigned int size){
+	//calculate the sum
+	unsigned int sum = 0;
+    	for (unsigned int i = 0; i < size; i++) {
+        	sum += data[i];
+   	 }
 	
+    	// Calculate the mean value
+   	 unsigned char mean = sum / size;
+
+    	return mean;
  }
 
 
 
  unsigned char find_maximum (unsigned char *data, unsigned int size){
-	
+	//finding largest from array
+	unsigned char max=data[0];
+	for(unsigned int i=1;i<size;i++) {
+		if (data[i] > max) {
+			max=data[i];
+		 }
+		
+	}
+	return max;
 
  }
 
 
  unsigned char find_minimum (unsigned char *data, unsigned int size){
-	
+	//finding smallest from array
+	unsigned char min=data[0];
+	for(unsigned int i=1;i<size;i++) {
+		if (data[i] < min) {
+			min=data[i];
+		 }
+		
+	}
+	return min;
 
  }
 
 
 unsigned char sort_array (unsigned char *data, unsigned int size){
-	
+	//sort the array in ascending order
+	// Placeholder implementation: Bubble sort
+    for (unsigned int i = 0; i < size - 1; i++) {
+        for (unsigned int j = 0; j < size - i - 1; j++) {
+            if (data[j] > data[j + 1]) {
+                // Swap the elements
+                unsigned char temp = data[j];
+                data[j] = data[j + 1];
+                data[j + 1] = temp;
+            }
+        }
+    }
+   printf("sorted Array elements:\n");
+	for (unsigned int i = 0; i < size; i++) {
+        	printf("%d ", data[i]);
+   	 }
+    	printf("\n");
+
+
+    return 0; // Return 0 as a placeholder
  }
 
